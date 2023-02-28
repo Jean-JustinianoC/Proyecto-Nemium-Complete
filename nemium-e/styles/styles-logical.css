@@ -1,0 +1,304 @@
+:root{
+    font-size: 16px;
+    --white40:#B8C1EC;
+    --white30: white;
+    --white20: #A5A3A5;
+    --white10: #3A3539;
+    ;
+
+}
+
+body{
+    color: var(--white40);
+    font-family: 'Montserrat', sans-serif;
+    background:#232946 ;
+    margin:0;
+
+}
+
+a{
+    color: var(--white40);
+}
+
+header {
+    inset-block-start:-45px; 
+}
+
+.header-content{
+    padding-inline: 20px;
+    inset-block-start: 65px; 
+}
+
+header {
+
+    margin-block-start: 20px;
+    font-size: 14px;
+    color: var(--white30);
+    inset-block-start: 0;
+    inset-inline-start: -208px;
+    inline-size: 188px; 
+}
+
+header li {
+    color: var(--white20);
+    margin-block-end:16px;
+}
+
+header a{
+    color: var(--white20);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--white30);
+}
+
+nav details summary {
+    font-weight: bold;
+
+}
+
+h1, h2 ,h3 {
+    color: var(--white30);
+}
+
+h1{
+    font-size: 32px;
+    margin-block-start: 20px;
+    margin-block-end: 40px;
+    font-weight: 700;
+   /* font-size: 3.75em;*/
+}
+
+h2{
+    font-size: 2.5em;
+    margin-block: 40px;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 1.5em;
+    margin-block: 16px;
+    font-weight: 600;
+}
+
+
+
+hr{
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.2); 
+}
+
+pre{
+    
+    margin-block-end: 40px;
+    padding: 40px;
+    overflow: auto;
+    color: #FFFFFE;
+    font-weight: normal;
+    font-size:16px ;
+ }
+
+
+p{
+    color: var(--white40);
+    
+}
+
+/*Seudoelementos
+    ::before ::after ::selector
+*/
+.img-class {
+    inset-block-end: 40px;
+}
+.section-content img {
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+}
+.section-content{
+    counter-reset: titleList;
+}
+
+.section-content h3 {
+    counter-increment: titleList;
+}
+
+.section-content p strong {
+    font-style: bold;
+}
+
+.section-content h3::before{
+    content: counter(titleList,decimal)". ";
+}
+
+/*.section-content h3::after{
+    content: '';
+    width: 32px;
+    height: 4px;
+    display: inline-block;
+    background-color: var(--white10);
+
+}
+*/
+blockquote {
+
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background-color: #D4939D;
+    border-radius: 8px;
+    line-height: 32px;
+    font-size: 24px;
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+}
+blockquote p {
+    color: #232946;
+}
+
+blockquote p span::before{
+    content: '-';
+}
+
+.hr-content {
+   display: none;
+}
+
+ol li {
+    color: var(--white40);
+}
+ul li {
+    color: var(--white40);
+}
+
+.wrapper {
+
+    max-inline-size: 902px;
+    margin: auto;
+    
+}
+.main-content {
+    padding-inline: 16px;
+}
+
+
+.slider-container{
+    
+    display: block;
+    overflow: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height:auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list{
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background:var(--white40);
+    border-radius: 50%;
+}
+
+.slider-bullet:hover{
+    background: var(--white20);
+}
+
+p a {
+    color: #EEBBC3;
+}
+
+.form input{
+    inline-size: 100%;
+    border: 1px solid var(--white40);
+    background: #232946;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--white30);
+    display: block;
+    margin-block-end: 24px;
+    font-size: 16px;
+
+}
+.form input[type="submit"] {
+    background: #EEBBC3;
+    border: none;
+    color: #232946;
+    font-weight: 700;
+}
+
+.form ::-webkit-input-placeholder{
+    color: var(--white20);
+}
+
+footer {
+    background:#EEBBC3;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-derechos-reservado p{
+    font-family: 'Roboto';
+    font-size: 32px;
+    color: #232946;
+    font-weight: 400;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ @media screen and (min-width:1366px){
+    .header {
+        position: sticky;
+        inset-block-start:-45px;
+    }
+    
+    .header-content{
+        position: relative;
+        inset-block-start: 35px;
+    }
+    
+    header {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        inline-size: 188px;
+    }
+
+    h1 {
+        font-size: 64px;
+        margin-block-start: 64px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+  
